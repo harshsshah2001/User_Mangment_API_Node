@@ -1,0 +1,26 @@
+<% include('../layouts/header.ejs')%>
+
+<h1>Forgot</h1>
+
+<form action="/forget" method="post">
+
+    <input type="email" placeholder="Enter Your Email" name="email"><br><br>
+    
+    <input type="submit" value="send Reset Link">
+
+</form>
+
+
+
+<%
+
+    if(typeof message !== 'undefined'){
+        %>
+        
+        <h4><%= message %></h4>
+
+        <%
+    }
+
+%>
+<% include('../layouts/footer.ejs')%>

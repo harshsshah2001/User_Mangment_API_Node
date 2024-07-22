@@ -1,0 +1,42 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="userImages/<%= user.image%>" width="100px" height="100px" alt="<%= user.image%>">
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="image"><br><br>
+        <input type="hidden" value="<%= user._id%>" name="user_id">
+
+        <input type="text" name="name" value="<%=user.name%>" placeholder="Enter Name"><br><br>
+        <input type="email" name="email" value="<%=user.email%>" placeholder="Enter email"><br><br>
+        <input type="number" name="mno" value="<%=user.mobile%>" placeholder="Enter mobile number"><br><br>
+        <input type="submit" value="update Profile">
+
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <img src="/userImages/<%= user.image %>" width="100px" height="100px" alt="<%= user.image %>">
+    <form action="/edit" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image"><br><br>
+        <input type="hidden" value="<%= user._id %>" name="user_id">
+        <input type="text" name="name" value="<%= user.name %>" placeholder="Enter Name"><br><br>
+        <input type="email" name="email" value="<%= user.email %>" placeholder="Enter email"><br><br>
+        <input type="number" name="mno" value="<%= user.mobile %>" placeholder="Enter mobile number"><br><br>
+        <input type="submit" value="Update Profile">
+    </form>
+</body>
+</html>
